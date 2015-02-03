@@ -1,0 +1,12 @@
+task:
+    definition:
+        id: 12345
+        name: my task
+        parameters:
+            method: GET
+            url: http://www.google.com
+            follow_redirects: false
+            timeout: 10
+    run:
+        logging:
+            config: C:\PROJECTS\__GIT__\config\logging.conf

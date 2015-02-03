@@ -1,5 +1,5 @@
-import os, sys
 import  uuid
+import yaml
 
 class ParseYAML(object):
 	""" 
@@ -15,7 +15,7 @@ class ParseYAML(object):
 			print err
 
 	def __get__(self, instance, owner):
-		import yaml
+		
 		try:
 			self.contents = yaml.load(self.contents)
 			return dict(self.contents)

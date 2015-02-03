@@ -31,10 +31,12 @@ class CheckHTTP(object):
 		if method.upper() != "GET": 
 			raise Exception("Only accepts GET as method")
 
-		# Try catch must be immplemented here
-		return requests.get(url,  
-					allow_redirects=follow_redirects,
-					timeout=timeout)
+		# Try catch must be implemented here
+		# ConnectionError, HTTPError, Timeout, TooManyRedirects
+		# requests.exceptions.RequestException
+		response = requests.get(url,  
+				allow_redirects=follow_redirects,
+				timeout=timeout)
 
 
 if __name__ == '__main__':
